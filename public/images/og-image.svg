@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd447"/>
+      <stop offset="100%" stop-color="#ff6b57"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="240" cy="157" r="100" fill="#ffffff" opacity="0.25"/>
+  <circle cx="960" cy="472" r="133" fill="#ffffff" opacity="0.2"/>
+  <text x="50%" y="50%" font-family="Verdana, sans-serif" font-size="54" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">SKS World School - Admissions Open 2026-27</text>
+</svg>
