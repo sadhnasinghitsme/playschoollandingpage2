@@ -24,9 +24,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <div>
-            <div className="flex items-center gap-2.5">
-              <Image src="/images/logo.svg" alt="SKS World School logo" width={40} height={40} />
-              <span className="font-heading text-lg font-bold text-white">{SCHOOL_NAME}</span>
+            <div className="inline-flex rounded-lg bg-white px-3 py-2">
+              <Image src="/images/sks-logo.png" alt="SKS World School logo" width={186} height={88} className="h-9 w-auto" />
             </div>
             <p className="mt-3 text-sm">{FULL_ADDRESS}</p>
             <p className="mt-3 text-sm">

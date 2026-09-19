@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const GALLERY_ITEMS = [
-  { src: "/images/gallery-annual-day.svg", alt: "Children performing on stage at SKS World School Annual Day celebration" },
-  { src: "/images/gallery-activity.svg", alt: "Students taking part in a hands-on activity session at SKS World School" },
-  { src: "/images/gallery-playzone.svg", alt: "Children playing in the outdoor play zone at SKS World School campus" },
-  { src: "/images/gallery-classroom.svg", alt: "Smart interactive classroom with digital learning tools at SKS World School" },
-  { src: "/images/gallery-sports.svg", alt: "Students participating in a sports day event at SKS World School" },
-  { src: "/images/gallery-artcraft.svg", alt: "Children showing their art and craft creations at SKS World School" },
+  { src: "/images/gallery-ball-pit.jpg", position: "55% 50%", alt: "Children laughing and playing with colourful balls in the ball pit at SKS World School" },
+  { src: "/images/philosophy-play.jpg", position: "60% 50%", alt: "A child riding a toy car through the indoor play zone at SKS World School" },
+  { src: "/images/gallery-basketball.jpg", position: "55% 50%", alt: "Students taking turns in a basketball activity at SKS World School" },
+  { src: "/images/gallery-rocking-horse.jpg", position: "45% 50%", alt: "A boy riding a blue rocking horse in the play area at SKS World School" },
+  { src: "/images/gallery-ball-pit-girl.jpg", position: "85% 50%", alt: "A little girl exploring the ball pit at SKS World School" },
+  { src: "/images/gallery-prayer.jpg", position: "45% 50%", alt: "A student with folded hands and closed eyes in prayer at SKS World School" },
 ];
 
 export default function Gallery() {
@@ -18,7 +18,7 @@ export default function Gallery() {
             A Peek Into Campus Life
           </h2>
           <p className="mt-3 text-base text-ink-900/70">
-            Annual days, activity time and everyday moments of joyful learning at SKS.
+            Play zones, activity time and everyday moments of joyful learning at SKS.
           </p>
         </div>
 
@@ -35,6 +35,7 @@ export default function Gallery() {
                 loading="lazy"
                 sizes="(min-width: 768px) 30vw, 45vw"
                 className="object-cover"
+                style={{ objectPosition: item.position }}
               />
             </div>
           ))}

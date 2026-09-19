@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { SCHOOL_NAME, SOCIAL_LINKS } from "@/config/constants";
+import { SOCIAL_LINKS } from "@/config/constants";
 import { ChevronDownIcon, CloseIcon, MenuIcon } from "./icons";
 import TopBar from "./TopBar";
 
@@ -72,18 +72,15 @@ export default function Header() {
       <TopBar />
       <header className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
-          <a href="#top" className="flex flex-wrap items-center gap-2.5">
+          <a href="#top" aria-label="SKS World School — Home" className="flex flex-wrap items-center gap-2.5">
             <Image
-              src="/images/logo.svg"
+              src="/images/sks-logo.png"
               alt="SKS World School logo"
-              width={44}
-              height={44}
+              width={186}
+              height={88}
               priority
-              className="h-10 w-10 shrink-0 sm:h-11 sm:w-11"
+              className="h-10 w-auto shrink-0 sm:h-11"
             />
-            <span className="font-heading text-base font-bold text-ink-900 sm:text-lg">
-              {SCHOOL_NAME}
-            </span>
             <span className="inline-flex items-center gap-1 rounded-full border border-sunny-300 bg-sunny-50 px-2.5 py-0.5 text-[10px] font-bold text-coral-600 sm:text-xs">
               CBSE Affiliated <span aria-hidden="true">→</span>
             </span>

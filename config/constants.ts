@@ -77,8 +77,8 @@ export const PROGRAM_STAGES: ProgramStage[] = [
     tagline: "Play-based sensory learning",
     description:
       "A warm, home-like introduction to school through sensory play, music, movement and gentle routines that build first friendships and confidence.",
-    image: "/images/program-playgroup.svg",
-    imageAlt: "Toddlers engaged in sensory play activities in the playgroup classroom at SKS World School",
+    image: "/images/program-playgroup.jpg",
+    imageAlt: "Young SKS World School children playing together in the colourful ball pit",
   },
   {
     id: "nursery",
@@ -87,8 +87,8 @@ export const PROGRAM_STAGES: ProgramStage[] = [
     tagline: "Early language & social skills",
     description:
       "Story-time, rhymes and guided group play help children find their words, share, and build the social skills that make school feel exciting.",
-    image: "/images/program-nursery.svg",
-    imageAlt: "Nursery children participating in storytelling and group activities at SKS World School",
+    image: "/images/program-nursery.jpg",
+    imageAlt: "A nursery child riding a tricycle in the play zone while a teacher looks on",
   },
   {
     id: "kg",
@@ -97,8 +97,8 @@ export const PROGRAM_STAGES: ProgramStage[] = [
     tagline: "School readiness, numeracy & literacy",
     description:
       "A joyful, structured runway into Class 1 — building early reading, numbers and fine-motor skills through hands-on, activity-based lessons.",
-    image: "/images/program-kg.svg",
-    imageAlt: "Kindergarten children learning numbers and letters through activity-based lessons at SKS World School",
+    image: "/images/program-kg.jpg",
+    imageAlt: "A smiling kindergarten girl holding a basketball during a group activity at SKS World School",
   },
   {
     id: "primary",
@@ -107,8 +107,8 @@ export const PROGRAM_STAGES: ProgramStage[] = [
     tagline: "CBSE foundational curriculum",
     description:
       "A strong CBSE academic foundation paired with smart classrooms, robotics/Lego labs and sports — so learning stays rigorous and fun.",
-    image: "/images/program-primary.svg",
-    imageAlt: "Primary school students in a smart interactive classroom at SKS World School",
+    image: "/images/program-primary.jpg",
+    imageAlt: "Primary students of SKS World School standing together in their uniforms",
   },
 ];
 

@@ -6,11 +6,11 @@ export default function Philosophy() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="relative order-2 aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-soft lg:order-1">
           <Image
-            src="/images/program-kg.svg"
-            alt="Children exploring and learning through play at SKS World School"
+            src="/images/philosophy-play.jpg"
+            alt="SKS World School children riding toy cars and playing in the indoor play zone"
             fill
             sizes="(min-width: 1024px) 480px, 90vw"
-            className="object-cover"
+            className="object-cover object-[55%_50%]"
           />
         </div>
 

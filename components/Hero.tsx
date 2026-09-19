@@ -8,14 +8,15 @@ export default function Hero() {
   return (
     <section id="top" className="relative isolate min-h-[640px] overflow-hidden md:min-h-[90vh]">
       <Image
-        src="/images/hero-child-blocks.svg"
-        alt="Happy young child playing with colourful building blocks in a bright SKS World School classroom"
+        src="/images/hero-child.jpg"
+        alt="Young SKS World School student in uniform watching a classroom activity with classmates"
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[65%_25%]"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-white/10" />
+      <div className="absolute inset-0 bg-white/65 md:hidden" />
+      <div className="absolute inset-0 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.85)_35%,rgba(255,255,255,0)_62%)] md:block" />
 
       {/* Right edge: persistent vertical admission tab (desktop only) */}
       <EnquireTrigger
