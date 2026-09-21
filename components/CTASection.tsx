@@ -5,11 +5,11 @@ export default function CTASection() {
     <section className="bg-gradient-to-r from-coral-500 to-sunny-500 py-14 text-center sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl font-extrabold text-white sm:text-3xl md:text-4xl">
-          Give Your Child the Best Start This {ADMISSION_SESSION}
+          Admissions Open {ADMISSION_SESSION}: Pre-Nursery to Class 5
         </h2>
+        {/* TODO-CONFIRM: add a "seats are limited" line only if the school confirms it. */}
         <p className="mt-3 text-base text-white/90 sm:text-lg">
-          Seats for Playgroup to Class 5 are filling fast. Reach out today and let&apos;s plan
-          your child&apos;s SKS journey together.
+          Call or enquire today to book a campus visit at Sector 137, Noida.
         </p>
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a

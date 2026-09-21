@@ -10,6 +10,9 @@ interface Testimonial {
   avatar: string;
 }
 
+// TODO-CONFIRM: replace these with real, attributed parent reviews (first name, child's class,
+// review date if possible) taken from the school's Google reviews or website, with the parent's
+// consent. Keep any quote below only if it is confirmed real, and add the parent's first name.
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:

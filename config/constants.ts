@@ -67,55 +67,65 @@ export interface ProgramStage {
   description: string;
   image: string;
   imageAlt: string;
+  enquireLabel: string;
 }
 
 export const PROGRAM_STAGES: ProgramStage[] = [
   {
     id: "playgroup",
-    name: "Playgroup / Pre-Nursery",
+    name: "Playschool / Pre-Nursery",
+    // TODO-CONFIRM: age band "2-3" not verified on official pages; confirm with school
     ageRange: "Ages 2–3 years",
     tagline: "Play-based sensory learning",
     description:
       "A warm, home-like introduction to school through sensory play, music, movement and gentle routines that build first friendships and confidence.",
     image: "/images/program-playgroup.jpg",
     imageAlt: "Young SKS World School children playing together in the colourful ball pit",
+    enquireLabel: "Pre-Nursery",
   },
   {
     id: "nursery",
     name: "Nursery",
+    // TODO-CONFIRM: age band "3-4" not verified on official pages; confirm with school
     ageRange: "Ages 3–4 years",
     tagline: "Early language & social skills",
     description:
       "Story-time, rhymes and guided group play help children find their words, share, and build the social skills that make school feel exciting.",
     image: "/images/program-nursery.jpg",
     imageAlt: "A nursery child riding a tricycle in the play zone while a teacher looks on",
+    enquireLabel: "Nursery",
   },
   {
     id: "kg",
     name: "Kindergarten (KG)",
+    // TODO-CONFIRM: age band "4-5" not verified on official pages; confirm with school
     ageRange: "Ages 4–5 years",
     tagline: "School readiness, numeracy & literacy",
     description:
       "A joyful, structured runway into Class 1 — building early reading, numbers and fine-motor skills through hands-on, activity-based lessons.",
     image: "/images/program-kg.jpg",
     imageAlt: "A smiling kindergarten girl holding a basketball during a group activity at SKS World School",
+    enquireLabel: "Kindergarten",
   },
   {
     id: "primary",
     name: "Primary, Classes 1–5",
+    // TODO-CONFIRM: age band "6-10" not verified on official pages; confirm with school
     ageRange: "Ages 6–10 years",
     tagline: "CBSE foundational curriculum",
+    // TODO-CONFIRM: which junior classes (Classes 1-5) have access to the robotics lab
     description:
-      "A strong CBSE academic foundation paired with smart classrooms, robotics/Lego labs and sports — so learning stays rigorous and fun.",
+      "A strong CBSE academic foundation paired with smart classrooms, science and computer labs, a robotics lab and sports.",
     image: "/images/program-primary.jpg",
     imageAlt: "Primary students of SKS World School standing together in their uniforms",
+    enquireLabel: "Primary",
   },
 ];
 
 export const CLASS_OPTIONS = [
-  "Playgroup / Pre-Nursery",
+  "Pre-Nursery / Playschool",
   "Nursery",
-  "Kindergarten (KG)",
+  "KG",
   "Class 1",
   "Class 2",
   "Class 3",

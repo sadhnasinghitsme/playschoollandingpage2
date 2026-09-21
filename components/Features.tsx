@@ -8,33 +8,41 @@ interface Feature {
 
 const FEATURES: Feature[] = [
   {
-    title: "CBSE Affiliated",
-    description: "Recognized curriculum from CBSE, New Delhi, building strong academic foundations.",
+    title: "CBSE Affiliated (No. 2134003)",
+    description: "A CBSE-affiliated, English-medium, co-educational school in Sector 137, Noida.",
     icon: BadgeIcon,
   },
   {
     title: "Activity-Based Learning",
-    description: "Concepts taught through hands-on activities, not rote memorization.",
+    description:
+      "Students learn by doing: concepts are taught through hands-on activities, not rote memorisation.",
     icon: PuzzleIcon,
   },
   {
     title: "Caring & Trained Teachers",
+    // TODO-CONFIRM: add a verifiable detail (qualifications, years of experience or training
+    // programmes) or remove "Experienced educators trained in..." if the school cannot support it.
     description: "Experienced educators trained in early-childhood and primary pedagogy.",
     icon: HeartIcon,
   },
   {
-    title: "Low Student-Teacher Ratio",
-    description: "Small class sizes mean individual attention for every child.",
+    title: "Individual Attention",
+    // TODO-CONFIRM: confirm the 1:25 student-teacher ratio applies to the junior wing.
+    description:
+      "A student-teacher ratio of 1:25 helps teachers give every child care and attention.",
     icon: UsersIcon,
   },
   {
     title: "Safe & Secure Transport",
-    description: "GPS-enabled buses with trained attendants for safe pick-up and drop.",
+    // TODO-CONFIRM: "GPS" and "trained attendants" may be re-added only if the school confirms them.
+    description:
+      "Bus routes customised to pick-up points, mobile-connected buses, a separate bus boarding lane and first aid on board.",
     icon: BusIcon,
   },
   {
-    title: "CCTV-Monitored AC Campus",
-    description: "Fully air-conditioned classrooms with round-the-clock CCTV surveillance.",
+    title: "CCTV-Monitored, Safe Campus",
+    description:
+      "CCTV surveillance, an infirmary with trained staff and a soft-padded play area. Well-ventilated classrooms, with an air-conditioned library and auditorium.",
     icon: ShieldIcon,
   },
   {
@@ -43,13 +51,15 @@ const FEATURES: Feature[] = [
     icon: MonitorIcon,
   },
   {
-    title: "Robotics & Lego for Kids",
-    description: "Early exposure to robotics and Lego-based learning builds problem-solving skills.",
+    title: "Robotics Lab in association with LEGO",
+    // TODO-CONFIRM: which junior classes use the robotics lab.
+    description: "Hands-on robotics and building that grow problem-solving skills.",
     icon: RobotIcon,
   },
   {
-    title: "SMS Updates for Parents",
-    description: "Timely SMS alerts keep parents informed on attendance and school updates.",
+    title: "SMS Updates & Parent App",
+    description:
+      "SMS alerts and a mobile app keep parents informed about attendance and school activities.",
     icon: MessageIcon,
   },
 ];
@@ -60,10 +70,12 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
-            Why Parents Choose SKS
+            Why Parents Choose SKS World School, Noida Sector 137
           </h2>
+          {/* TODO-CONFIRM: add "trusted by" wording only once review numbers support it. */}
           <p className="mt-3 text-base text-ink-900/70">
-            Trusted by families across Noida for a safe, joyful and academically strong start.
+            A CBSE school on the Noida Expressway with a safe campus, activity-based classrooms
+            and bus transport.
           </p>
         </div>
 

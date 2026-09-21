@@ -7,11 +7,11 @@ export default function Programs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
-            Programs for Every Age &amp; Stage
+            Nursery to Class 5 Programs at SKS World School, Noida
           </h2>
           <p className="mt-3 text-base text-ink-900/70">
-            From first steps into school to a strong CBSE foundation — a clear path from Playgroup
-            to Class 5.
+            From first steps into school to a strong CBSE foundation — a clear path from
+            Pre-Nursery to Class 5.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Programs() {
                   href="#enquiry"
                   className="mt-4 inline-flex items-center justify-center rounded-full bg-sunny-100 px-4 py-2 text-sm font-bold text-ink-900 transition hover:bg-sunny-200"
                 >
-                  Enquire for {stage.name.split(/[ ,]/)[0]}
+                  Enquire for {stage.enquireLabel}
                 </a>
               </div>
             </article>

@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="top" className="relative isolate min-h-[640px] overflow-hidden md:min-h-[90vh]">
       <Image
         src="/images/hero-child.jpg"
-        alt="Young SKS World School student in uniform watching a classroom activity with classmates"
+        alt="Children in class at SKS World School, Sector 137 Noida"
         fill
         priority
         sizes="100vw"
@@ -29,21 +29,30 @@ export default function Hero() {
 
       <div className="relative z-20 mx-auto flex min-h-[640px] max-w-7xl items-center px-4 py-16 sm:px-6 md:min-h-[90vh] md:py-24 lg:px-8">
         <div className="max-w-xl">
+          <p className="mb-2 text-base font-extrabold text-coral-600 sm:text-lg">
+            Fun Learning Every Day
+          </p>
           <h1 className="font-heading text-4xl font-extrabold leading-[1.05] text-coral-600 sm:text-5xl md:text-6xl">
             <span className="relative inline-block pb-3">
-              Fun Learning Every
+              School Admission in Noida
               <SquiggleUnderline className="absolute -bottom-1 left-0 h-3 w-full text-sunny-400" />
             </span>{" "}
             <span className="inline-block rounded-2xl bg-coral-600 px-4 py-1 text-sunny-300">
-              Day
+              Sector 137
             </span>
+            : Playschool to Class 5
           </h1>
 
           <p className="mt-6 text-xl font-extrabold text-coral-600 sm:text-2xl">
-            Admissions Open! Playschool to Class 5 in{" "}
+            Admissions Open 2026-27 at SKS World School,{" "}
             <span className="inline-block rounded-xl bg-sunny-300 px-3 py-0.5 text-ink-900">
-              Noida
+              Noida Expressway
             </span>
+            . CBSE-affiliated, co-ed, English medium.
+          </p>
+          <p className="mt-3 text-sm font-semibold text-ink-900/80 sm:text-base">
+            CBSE Affiliation No. 2134003 | Near Sector 137 Metro Station | Noida Expressway |
+            Pre-Nursery to Class 5
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

@@ -28,6 +28,7 @@ export default function Footer() {
               <Image src="/images/sks-logo.png" alt="SKS World School logo" width={186} height={88} className="h-9 w-auto" />
             </div>
             <p className="mt-3 text-sm">{FULL_ADDRESS}</p>
+            <p className="mt-1 text-sm">Near Sector 137 Metro Station, Noida Expressway</p>
             <p className="mt-3 text-sm">
               Affiliated to {AFFILIATION_BOARD} &middot; {AFFILIATION_LABEL}
             </p>
@@ -87,7 +88,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/50">
-          © {year} {SCHOOL_NAME}. All rights reserved. Managed by {TRUST_NAME}.
+          © {year} {SCHOOL_NAME}, Sector 137, Noida. CBSE {AFFILIATION_LABEL}. All rights reserved.
+          Managed by {TRUST_NAME}.
         </div>
       </div>
     </footer>

@@ -213,7 +213,7 @@ export default function EnquiryForm({ compact = false }: EnquiryFormProps) {
         disabled={status === "loading"}
         className="mt-6 w-full rounded-full bg-coral-500 px-6 py-3.5 text-base font-bold text-white shadow-soft transition hover:bg-coral-600 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "loading" ? "Submitting..." : "Submit Enquiry"}
+        {status === "loading" ? "Submitting..." : "Get Fee Structure & Call Back"}
       </button>
 
       <p className="mt-3 text-center text-xs text-ink-900/50">

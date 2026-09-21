@@ -31,9 +31,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Best Playschool & Primary CBSE School in Noida Sector 137 | SKS World School",
+  title: "Nursery Admission in Noida Sector 137 | CBSE School 2026-27",
   description:
-    "Admissions open 2026-27 at SKS World School, Sector 137, Noida Expressway — CBSE-affiliated, English-medium school for Playgroup to Class 5. Activity-based learning, safe AC campus, smart classrooms. Enquire now.",
+    "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Admissions open Pre-Nursery to Class 5, 2026-27. Enquire today.",
   keywords: [
     "best playschool in Noida",
     "CBSE school Noida Sector 137",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SKS World School, Noida — Admissions Open 2026-27",
     description:
-      "CBSE-affiliated school in Sector 137, Noida Expressway for Playgroup to Class 5. Activity-based learning in a safe, caring, air-conditioned campus.",
+      "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Admissions open Pre-Nursery to Class 5, 2026-27. Enquire today.",
     url: SITE_URL,
     siteName: SCHOOL_NAME,
     images: [
