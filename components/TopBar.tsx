@@ -5,7 +5,21 @@ import EnquireTrigger from "./EnquireTrigger";
 export default function TopBar() {
   return (
     <div className="bg-coral-600 text-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-1.5 px-4 py-2 text-xs sm:px-6 sm:text-sm lg:px-8">
+      {/* Mobile only: one thin line, no Enquire button */}
+      <div className="flex items-center justify-between gap-2 px-4 py-1.5 text-xs sm:hidden">
+        <a href={PHONE_TEL_LINK} className="flex min-w-0 items-center gap-1.5 font-bold">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15">
+            <PhoneIcon width={11} height={11} />
+          </span>
+          <span className="whitespace-nowrap">{PHONE_DISPLAY}</span>
+        </a>
+        <span className="shrink-0 whitespace-nowrap text-[11px] font-bold text-sunny-300">
+          Admissions Open {ADMISSION_SESSION}
+        </span>
+      </div>
+
+      {/* Desktop only: unchanged three-part row */}
+      <div className="mx-auto hidden max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-1.5 px-4 py-2 text-xs sm:flex sm:px-6 sm:text-sm lg:px-8">
         <a href={PHONE_TEL_LINK} className="flex items-center gap-2 font-semibold">
           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/15">
             <PhoneIcon width={13} height={13} />
