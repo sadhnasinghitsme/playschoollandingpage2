@@ -13,8 +13,8 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validate(payload: Partial<EnquiryPayload>): string | null {
   if (!payload.parentName?.trim()) return "Parent name is required.";
-  if (!payload.childName?.trim()) return "Child name is required.";
-  if (!payload.classSeeking?.trim()) return "Please select the class/stage you're enquiring for.";
+  if (!payload.childName?.trim()) return "Student name is required.";
+  if (!payload.classSeeking?.trim()) return "Please select the class you're enquiring for.";
   if (!payload.phone || !PHONE_REGEX.test(payload.phone.trim())) {
     return "Please enter a valid 10-digit Indian mobile number.";
   }

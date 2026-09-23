@@ -31,20 +31,23 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Nursery Admission in Noida Sector 137 | CBSE School 2026-27",
+  title: "Class 6-12 Admission in Noida Sector 137 | CBSE School",
   description:
-    "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Admissions open Pre-Nursery to Class 5, 2026-27. Enquire today.",
+    "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Class 6 to 12 admissions open. Book a campus visit.",
   keywords: [
-    "best playschool in Noida",
-    "CBSE school Noida Sector 137",
-    "playschool Noida Expressway",
-    "primary school admissions Noida",
+    "school admission in Noida Sector 137",
+    "CBSE school admission",
+    "class 11 admission",
+    "admission for class 6",
+    "class 10 admission",
+    "CBSE schools in Sector 137 Noida",
+    "schools near Sector 137 Metro station Noida",
     "SKS World School",
   ],
   openGraph: {
-    title: "SKS World School, Noida — Admissions Open 2026-27",
+    title: "SKS World School, Noida: Class 6 to 12 Admissions Open",
     description:
-      "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Admissions open Pre-Nursery to Class 5, 2026-27. Enquire today.",
+      "SKS World School, Sector 137, Noida Expressway. CBSE co-ed school near Sector 137 Metro. Class 6 to 12 admissions open. Book a campus visit.",
     url: SITE_URL,
     siteName: SCHOOL_NAME,
     images: [
@@ -52,7 +55,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "SKS World School, Noida - Admissions Open 2026-27",
+        alt: "SKS World School, Noida - Class 6 to 12 Admissions Open",
       },
     ],
     locale: "en_IN",
@@ -73,7 +76,7 @@ export default function RootLayout({
     "@type": "School",
     name: SCHOOL_NAME,
     description:
-      "SKS World School is a CBSE-affiliated, English-medium, co-educational school in Sector 137, Noida Expressway, offering Playgroup through Class 5.",
+      "SKS World School is a CBSE-affiliated, English-medium, co-educational school in Sector 137, Noida Expressway, offering Class 6 to 12 admissions.",
     url: SITE_URL,
     telephone: `+91${PHONE_NUMBER}`,
     email: EMAIL_ADDRESS,

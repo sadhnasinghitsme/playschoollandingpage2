@@ -3,7 +3,7 @@
 
 export const SCHOOL_NAME = "SKS World School";
 export const SCHOOL_SHORT_NAME = "SKS World School";
-export const TAGLINE = "Playschool to Class 5 | CBSE Affiliated";
+export const TAGLINE = "Class 6 to 12 | CBSE Affiliated";
 
 export const LOCATION_AREA = "Sector 137, Noida Expressway";
 export const CITY = "Noida";
@@ -22,17 +22,27 @@ export const PHONE_NUMBER = "9319910888";
 export const PHONE_DISPLAY = "+91 93199 10888";
 export const PHONE_TEL_LINK = `tel:+91${PHONE_NUMBER}`;
 
+// Second admissions number, listed on the school's official contact page and FAQ.
+export const PHONE_2_NUMBER = "9540530100";
+export const PHONE_2_DISPLAY = "+91 95405 30100";
+export const PHONE_2_TEL_LINK = `tel:+91${PHONE_2_NUMBER}`;
+
+export const ADMIN_OFFICE_HOURS = "Administration Office: 9:00 AM to 2:00 PM, working days";
+
 export const EMAIL_ADDRESS = "contact@sksworldschoolnoida.ac.in";
 export const EMAIL_LINK = `mailto:${EMAIL_ADDRESS}`;
 
 // WhatsApp number in international format without + or spaces, for wa.me links
 export const WHATSAPP_NUMBER = "919319910888";
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Hi! I'd like to know more about admissions at SKS World School, Noida for the 2026-27 session.";
+  "Hi, I want to know about Class 6-12 admission at SKS World School, Sector 137.";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_DEFAULT_MESSAGE
 )}`;
 
+// TODO-CONFIRM: ask the school which session it is admitting into (2026-27 mid-session vacancies
+// or 2027-28 registrations) and update this value to match. It appears in the top bar pill and
+// the enquiry section badge.
 export const ADMISSION_SESSION = "2026-27";
 
 export const SOCIAL_LINKS = {
@@ -51,13 +61,15 @@ export const MAP_DIRECTIONS_LINK = `https://www.google.com/maps/search/?api=1&qu
   FULL_ADDRESS
 )}`;
 
+// TODO-CONFIRM: preferred domain/path for this page (for example
+// admissions.sksworldschoolnoida.ac.in/senior) so the display URL matches the final URL.
 export const SITE_URL = "https://www.sksworldschoolnoida.ac.in";
 
 export type StageId =
-  | "playgroup"
-  | "nursery"
-  | "kg"
-  | "primary";
+  | "middle"
+  | "secondary"
+  | "senior-secondary"
+  | "beyond";
 
 export interface ProgramStage {
   id: StageId;
@@ -70,65 +82,65 @@ export interface ProgramStage {
   enquireLabel: string;
 }
 
+// TODO-CONFIRM (school to supply, then add to the descriptions below): subjects for Classes 6-8,
+// assessments / mock tests / doubt classes for Class 10 board preparation, streams and subject
+// combinations for Classes 11-12 (Science PCM/PCB appear only on third-party listings; add
+// Commerce or Humanities only if offered), Class 11 eligibility, and which classes are open now.
+// TODO-CONFIRM: swap the photos below for senior-class campus, classroom and lab photos.
 export const PROGRAM_STAGES: ProgramStage[] = [
   {
-    id: "playgroup",
-    name: "Playschool / Pre-Nursery",
-    // TODO-CONFIRM: age band "2-3" not verified on official pages; confirm with school
-    ageRange: "Ages 2–3 years",
-    tagline: "Play-based sensory learning",
+    id: "middle",
+    name: "Middle School",
+    ageRange: "Classes 6–8",
+    tagline: "CBSE curriculum, activity-based learning",
     description:
-      "A warm, home-like introduction to school through sensory play, music, movement and gentle routines that build first friendships and confidence.",
-    image: "/images/program-playgroup.jpg",
-    imageAlt: "Young SKS World School children playing together in the colourful ball pit",
-    enquireLabel: "Pre-Nursery",
-  },
-  {
-    id: "nursery",
-    name: "Nursery",
-    // TODO-CONFIRM: age band "3-4" not verified on official pages; confirm with school
-    ageRange: "Ages 3–4 years",
-    tagline: "Early language & social skills",
-    description:
-      "Story-time, rhymes and guided group play help children find their words, share, and build the social skills that make school feel exciting.",
-    image: "/images/program-nursery.jpg",
-    imageAlt: "A nursery child riding a tricycle in the play zone while a teacher looks on",
-    enquireLabel: "Nursery",
-  },
-  {
-    id: "kg",
-    name: "Kindergarten (KG)",
-    // TODO-CONFIRM: age band "4-5" not verified on official pages; confirm with school
-    ageRange: "Ages 4–5 years",
-    tagline: "School readiness, numeracy & literacy",
-    description:
-      "A joyful, structured runway into Class 1 — building early reading, numbers and fine-motor skills through hands-on, activity-based lessons.",
-    image: "/images/program-kg.jpg",
-    imageAlt: "A smiling kindergarten girl holding a basketball during a group activity at SKS World School",
-    enquireLabel: "Kindergarten",
-  },
-  {
-    id: "primary",
-    name: "Primary, Classes 1–5",
-    // TODO-CONFIRM: age band "6-10" not verified on official pages; confirm with school
-    ageRange: "Ages 6–10 years",
-    tagline: "CBSE foundational curriculum",
-    // TODO-CONFIRM: which junior classes (Classes 1-5) have access to the robotics lab
-    description:
-      "A strong CBSE academic foundation paired with smart classrooms, science and computer labs, a robotics lab and sports.",
+      "CBSE curriculum with activity-based learning, science, maths and computer labs, and co-curricular activities.",
     image: "/images/program-primary.jpg",
-    imageAlt: "Primary students of SKS World School standing together in their uniforms",
-    enquireLabel: "Primary",
+    imageAlt: "Students of SKS World School standing together in their uniforms",
+    enquireLabel: "Classes 6–8",
+  },
+  {
+    id: "secondary",
+    name: "Secondary School",
+    ageRange: "Classes 9–10",
+    tagline: "CBSE board preparation for Class 10",
+    description:
+      "CBSE curriculum for Classes 9 and 10, building a strong foundation for the Class 10 board examination.",
+    image: "/images/gallery-prayer.jpg",
+    imageAlt: "A student with folded hands and closed eyes in prayer at SKS World School",
+    enquireLabel: "Classes 9–10",
+  },
+  {
+    id: "senior-secondary",
+    name: "Senior Secondary",
+    ageRange: "Classes 11–12",
+    tagline: "CBSE curriculum, board exams in Class 12",
+    description:
+      "CBSE curriculum for Classes 11 and 12, with CBSE board examinations in Class 12. Our admissions team shares the streams currently on offer when you enquire.",
+    image: "/images/gallery-basketball.jpg",
+    imageAlt: "Students taking turns in a basketball activity at SKS World School, Sector 137",
+    enquireLabel: "Classes 11–12",
+  },
+  {
+    id: "beyond",
+    name: "Beyond the Classroom",
+    ageRange: "Co-curricular",
+    tagline: "Robotics, music, dance, yoga & self-defence",
+    description:
+      "A Robotics Lab in association with LEGO, Dramm Jamm dance education, a music room with western and classical music and vocal training, self-defence classes and a yoga room.",
+    image: "/images/program-kg.jpg",
+    imageAlt: "A smiling student holding a basketball during a group activity at SKS World School",
+    enquireLabel: "Classes 6–12",
   },
 ];
 
+// TODO-CONFIRM: list only the classes the school is admitting into this session.
 export const CLASS_OPTIONS = [
-  "Pre-Nursery / Playschool",
-  "Nursery",
-  "KG",
-  "Class 1",
-  "Class 2",
-  "Class 3",
-  "Class 4",
-  "Class 5",
+  "Class 6",
+  "Class 7",
+  "Class 8",
+  "Class 9",
+  "Class 10",
+  "Class 11",
+  "Class 12",
 ];

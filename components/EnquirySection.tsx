@@ -11,13 +11,13 @@ export default function EnquirySection() {
             Admissions open {ADMISSION_SESSION}
           </span>
           <h2 className="mt-4 font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
-            Nursery to Class 5 Admission Enquiry, Sector 137 Noida
+            Class 6-12 Admission Enquiry: Get Fee Structure &amp; Callback
           </h2>
           {/* TODO-CONFIRM: add "within [2 working hours]" after "call you back" once the admissions
               team confirms the callback time it can meet. */}
           <p className="mt-3 max-w-md text-base text-ink-900/70">
-            Share a few details and our admissions team will call you back with the class
-            schedule, fee structure and a convenient campus visit slot.
+            Get the fee structure, seat availability and a campus visit slot. Our admissions team
+            will call you back.
           </p>
           <ul className="mt-6 space-y-2.5 text-sm font-semibold text-ink-900/80">
             {/* TODO-CONFIRM: replace with "Callback within [2 working hours]" once confirmed. */}

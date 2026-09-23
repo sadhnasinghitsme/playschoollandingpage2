@@ -3,27 +3,36 @@
 import { useState } from "react";
 import { PHONE_DISPLAY, PHONE_TEL_LINK } from "@/config/constants";
 
+// TODO-CONFIRM: add these answers only once the school supplies them (do not publish unconfirmed
+// answers): Class 11 eligibility (minimum Class 10 marks by stream), board results (year, pass %,
+// students above 90%), the 1:25 student-teacher ratio for senior classes, the exact streams open,
+// and the bus areas covered. Also add FAQPage JSON-LD schema once the list is final.
 const FAQS = [
   {
     question: "What is the admission process at SKS World School?",
-    // TODO-CONFIRM: registration office hours and interaction format.
     answer:
-      "Submit an enquiry via the form on this page or call us directly. Our admissions team will share the registration form, schedule a campus visit, and guide you through document verification and fee payment. Registration is also available online or at the school administration office. After registration, parents are invited for an interaction.",
+      "It is a simple four-step process. Registration: register online or collect the form at the Administration Office, open 9:00 AM to 2:00 PM on working days, and submit all required documents so your form can be processed. Interaction: we phone you with the date and time of the interaction and also post it on the school website; please submit one form per applicant. Selection: the school confirms admission after the interaction. Fee deposit: once admission is confirmed, deposit the fee within the stipulated time to secure the seat. After that date the seat is offered to another applicant.",
   },
   {
-    question: "What is the age eligibility for each class?",
-    // TODO-CONFIRM: replace with a table of Class | Minimum age as on 31 March, supplied by the
-    // school for Pre-Nursery, Nursery, KG and Classes 1-5. Do not publish third-party age figures
-    // (e.g. Pre-Nursery 2 years 5 months) unless the school confirms them.
+    question: "Which documents are needed for admission?",
+    // TODO-CONFIRM: add report card, photographs, address proof and any Class 9 or Class 11
+    // requirements once the school supplies them.
     answer:
-      "Playgroup/Pre-Nursery: 2–3 years, Nursery: 3–4 years, Kindergarten (KG): 4–5 years, Class 1: 5–6 years, with one additional year per subsequent class up to Class 5. Ages are considered as on 31st March of the admission year.",
+      "A self-attested copy of the birth certificate, and a Transfer Certificate from the last school for Class II onwards.",
+  },
+  {
+    question: "Which classes and streams are open for admission?",
+    // TODO-CONFIRM: name the classes open this session and the streams offered (Science PCM/PCB
+    // appear only on third-party listings; add Commerce or Humanities only if offered).
+    answer:
+      "SKS World School admits students from Class 6 to 12. Submit the enquiry form or call us to check seat availability and the streams on offer for your child's class.",
   },
   {
     question: "What are the school timings?",
-    // TODO-CONFIRM: copy timings from the school's official School Timings page, giving
-    // pre-primary and primary separately if they differ.
+    // TODO-CONFIRM: copy timings from the school's official School Timings page for the senior
+    // classes.
     answer:
-      "School timings vary slightly by stage (Playgroup/Nursery/KG vs. Primary). Our admissions team will share the exact daily schedule, along with drop-off and pick-up windows, when you enquire.",
+      "Our admissions team will share the exact daily schedule, along with drop-off and pick-up timings for your child's class, when you enquire.",
   },
   {
     question: "Is transport facility available?",
@@ -38,9 +47,9 @@ const FAQS = [
       "Fees depend on the class. Submit the enquiry form or message us on WhatsApp and we will share the current fee structure.",
   },
   {
-    question: "How does the school ensure child safety?",
+    question: "How does the school ensure student safety?",
     answer:
-      "The school uses CCTV surveillance, a soft-padded play area, a separate bus boarding lane, SMS alerts to parents and an infirmary with trained staff. School buses carry first aid, and the school has tie-ups with nearby hospitals and an ambulance for emergencies.",
+      "The school uses CCTV surveillance, a separate bus boarding lane, SMS alerts to parents and an infirmary with trained staff. School buses carry first aid, and the school has tie-ups with nearby hospitals and an ambulance for emergencies.",
   },
   {
     question: "Is the school air-conditioned?",
@@ -53,12 +62,7 @@ const FAQS = [
   {
     question: "Is SKS World School CBSE affiliated, and where is it?",
     answer:
-      "Yes, CBSE Affiliation No. 2134003. The campus is at Plot No. SS, Sector 137, Noida, near Sector 137 Metro Station on the Noida Expressway.",
-  },
-  {
-    question: "What is the student-teacher ratio?",
-    // TODO-CONFIRM: confirm the 1:25 ratio applies to the junior wing.
-    answer: "The ratio is 1:25, and every student receives individual care and attention.",
+      "Yes, CBSE Affiliation No. 2134003. The campus is at Plot No. SS, Sector 137, Noida, opposite Sector 137 Metro Station on the Noida Expressway.",
   },
 ];
 
@@ -74,7 +78,7 @@ export default function FAQ() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
-            Admission FAQs: SKS World School, Sector 137 Noida
+            Class 6-12 Admission FAQs: SKS World School, Sector 137 Noida
           </h2>
           <p className="mt-3 text-base text-ink-900/70">
             Still have questions?{" "}

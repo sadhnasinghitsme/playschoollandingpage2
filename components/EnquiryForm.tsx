@@ -27,8 +27,8 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function validate(values: FormState): Partial<Record<keyof FormState, string>> {
   const errors: Partial<Record<keyof FormState, string>> = {};
   if (!values.parentName.trim()) errors.parentName = "Please enter parent's name.";
-  if (!values.childName.trim()) errors.childName = "Please enter child's name.";
-  if (!values.classSeeking) errors.classSeeking = "Please select a class/stage.";
+  if (!values.childName.trim()) errors.childName = "Please enter student's name.";
+  if (!values.classSeeking) errors.classSeeking = "Please select a class.";
   if (!PHONE_REGEX.test(values.phone.trim())) {
     errors.phone = "Enter a valid 10-digit mobile number.";
   }
@@ -137,7 +137,7 @@ export default function EnquiryForm({ compact = false }: EnquiryFormProps) {
           />
         </Field>
 
-        <Field label="Child's Name" htmlFor="childName" error={errors.childName}>
+        <Field label="Student's Name" htmlFor="childName" error={errors.childName}>
           <input
             id="childName"
             name="childName"
@@ -151,7 +151,7 @@ export default function EnquiryForm({ compact = false }: EnquiryFormProps) {
           />
         </Field>
 
-        <Field label="Class / Stage Seeking Admission" htmlFor="classSeeking" error={errors.classSeeking}>
+        <Field label="Class Applying For" htmlFor="classSeeking" error={errors.classSeeking}>
           <select
             id="classSeeking"
             name="classSeeking"
@@ -161,7 +161,7 @@ export default function EnquiryForm({ compact = false }: EnquiryFormProps) {
             aria-describedby={errors.classSeeking ? "classSeeking-error" : undefined}
             className={inputClass(Boolean(errors.classSeeking))}
           >
-            <option value="">Select class/stage</option>
+            <option value="">Select a class</option>
             {CLASS_OPTIONS.map((option) => (
               <option key={option} value={option}>
                 {option}

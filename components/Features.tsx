@@ -1,36 +1,48 @@
+import Image from "next/image";
 import type { ReactElement, SVGProps } from "react";
 
 interface Feature {
   title: string;
   description: string;
   icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
+  image: string;
+  imageAlt: string;
 }
+
 
 const FEATURES: Feature[] = [
   {
     title: "CBSE Affiliated (No. 2134003)",
     description: "A CBSE-affiliated, English-medium, co-educational school in Sector 137, Noida.",
     icon: BadgeIcon,
+    image: "/images/features-school-gate.jpg",
+    imageAlt: "The SKS World School building and entrance gate on the Noida Expressway, Sector 137",
   },
   {
-    title: "Activity-Based Learning",
+    title: "Learning Beyond Books",
     description:
-      "Students learn by doing: concepts are taught through hands-on activities, not rote memorisation.",
+      "Movie and documentary-based education, Dramm Jamm dance education, music, yoga and self-defence classes alongside academics.",
     icon: PuzzleIcon,
+    image: "/images/features-dance.jpg",
+    imageAlt: "SKS World School students performing a group dance on stage",
   },
   {
     title: "Caring & Trained Teachers",
-    // TODO-CONFIRM: add a verifiable detail (qualifications, years of experience or training
-    // programmes) or remove "Experienced educators trained in..." if the school cannot support it.
-    description: "Experienced educators trained in early-childhood and primary pedagogy.",
+    // TODO-CONFIRM: add a verifiable detail (qualifications, years of experience, guidance for
+    // Class 10 and Class 12 board exams) once the school supplies it.
+    description: "Caring teachers who guide every student's academics and personal growth.",
     icon: HeartIcon,
+    image: "/images/features-teacher.jpg",
+    imageAlt: "A teacher with a group of SKS World School students in front of the classroom board",
   },
   {
     title: "Individual Attention",
-    // TODO-CONFIRM: confirm the 1:25 student-teacher ratio applies to the junior wing.
-    description:
-      "A student-teacher ratio of 1:25 helps teachers give every child care and attention.",
+    // TODO-CONFIRM: add "A student-teacher ratio of 1:25" only once the school confirms the ratio
+    // applies to the senior classes (official FAQ states 1:25).
+    description: "Every student receives individual care and attention from teachers.",
     icon: UsersIcon,
+    image: "/images/features-ball-pit-play.jpg",
+    imageAlt: "A teacher guiding students playing in the ball pit at SKS World School",
   },
   {
     title: "Safe & Secure Transport",
@@ -38,29 +50,41 @@ const FEATURES: Feature[] = [
     description:
       "Bus routes customised to pick-up points, mobile-connected buses, a separate bus boarding lane and first aid on board.",
     icon: BusIcon,
+    image: "/images/features-school-bus.jpg",
+    imageAlt: "An SKS World School bus parked on the campus road",
   },
   {
     title: "CCTV-Monitored, Safe Campus",
     description:
-      "CCTV surveillance, an infirmary with trained staff and a soft-padded play area. Well-ventilated classrooms, with an air-conditioned library and auditorium.",
+      "CCTV surveillance and an infirmary with trained staff. Well-ventilated classrooms, with an air-conditioned library and auditorium.",
     icon: ShieldIcon,
+    image: "/images/features-cctv.jpg",
+    imageAlt: "A CCTV camera monitoring a classroom play area",
   },
   {
-    title: "Smart Interactive Classrooms",
-    description: "Digital boards and interactive tools make lessons engaging and visual.",
+    title: "Smart Classrooms & Labs",
+    description:
+      "Interactive classrooms with smart boards, plus science, maths and computer labs.",
     icon: MonitorIcon,
+    image: "/images/features-smart-classroom-2.jpg",
+    imageAlt: "A classroom with two large interactive screens and flexible seating",
   },
   {
     title: "Robotics Lab in association with LEGO",
-    // TODO-CONFIRM: which junior classes use the robotics lab.
+    // TODO-CONFIRM: add "STEM and robotics from Class [x]" once the school confirms which
+    // classes use the LEGO lab.
     description: "Hands-on robotics and building that grow problem-solving skills.",
     icon: RobotIcon,
+    image: "/images/features-robotics.jpg",
+    imageAlt: "A student and mentor building and wiring a robotics kit",
   },
   {
     title: "SMS Updates & Parent App",
     description:
       "SMS alerts and a mobile app keep parents informed about attendance and school activities.",
     icon: MessageIcon,
+    image: "/images/features-sms-app.jpg",
+    imageAlt: "A parent's hands holding a phone showing a messaging app",
   },
 ];
 
@@ -72,10 +96,14 @@ export default function Features() {
           <h2 className="font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
             Why Parents Choose SKS World School, Noida Sector 137
           </h2>
-          {/* TODO-CONFIRM: add "trusted by" wording only once review numbers support it. */}
+          {/* TODO-CONFIRM: add one sentence on senior classes (streams, labs, board-exam preparation)
+              and "trusted by" wording only once the school and review numbers support them. */}
           <p className="mt-3 text-base text-ink-900/70">
-            A CBSE school on the Noida Expressway with a safe campus, activity-based classrooms
-            and bus transport.
+            SKS World School is an English-medium, co-educational, CBSE-affiliated school on the
+            Noida Expressway (Sector 137), run by the SKS Educational &amp; Social Trust under
+            Chairman Shri S.K. Sharma. It focuses on holistic education beyond books, with a wide
+            range of extracurricular activities that help each student build talent and good
+            values.
           </p>
         </div>
 
@@ -83,14 +111,25 @@ export default function Features() {
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-start gap-4 rounded-2xl border border-ink-900/5 bg-sunny-50/40 p-5 transition hover:shadow-soft"
+              className="flex flex-col overflow-hidden rounded-2xl border border-ink-900/5 bg-sunny-50/40 transition hover:shadow-soft"
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-coral-500 shadow-soft">
-                <feature.icon className="h-6 w-6" aria-hidden="true" />
-              </span>
-              <div>
-                <h3 className="font-heading text-base font-bold text-ink-900">{feature.title}</h3>
-                <p className="mt-1 text-sm text-ink-900/65">{feature.description}</p>
+              <div className="relative aspect-[16/9] w-full">
+                <Image
+                  src={feature.image}
+                  alt={feature.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 items-start gap-4 p-5">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-coral-500 shadow-soft">
+                  <feature.icon className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <div>
+                  <h3 className="font-heading text-base font-bold text-ink-900">{feature.title}</h3>
+                  <p className="mt-1 text-sm text-ink-900/65">{feature.description}</p>
+                </div>
               </div>
             </div>
           ))}
