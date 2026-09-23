@@ -1,6 +1,6 @@
 # SKS World School — Admissions Landing Page
 
-Single-page admissions landing page for SKS World School, Noida (Playgroup–Class 5),
+Single-page admissions landing page for SKS World School, Noida Sector 137 (Class 6–12 senior wing),
 built with Next.js App Router, TypeScript and Tailwind CSS.
 
 ## Getting started

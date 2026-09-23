@@ -8,6 +8,9 @@ import {
   CHAIRMAN_NAME,
   PHONE_DISPLAY,
   PHONE_TEL_LINK,
+  PHONE_2_DISPLAY,
+  PHONE_2_TEL_LINK,
+  ADMIN_OFFICE_HOURS,
   EMAIL_ADDRESS,
   EMAIL_LINK,
   MAP_EMBED_SRC,
@@ -28,7 +31,10 @@ export default function Footer() {
               <Image src="/images/sks-logo.png" alt="SKS World School logo" width={186} height={88} className="h-9 w-auto" />
             </div>
             <p className="mt-3 text-sm">{FULL_ADDRESS}</p>
-            <p className="mt-1 text-sm">Near Sector 137 Metro Station, Noida Expressway</p>
+            <p className="mt-1 text-sm">
+              Opposite Sector 137 Metro Station, Noida Expressway. Class 6 to 12 admissions at
+              Sector 137, Noida.
+            </p>
             <p className="mt-3 text-sm">
               Affiliated to {AFFILIATION_BOARD} &middot; {AFFILIATION_LABEL}
             </p>
@@ -40,9 +46,13 @@ export default function Footer() {
               <a href={PHONE_TEL_LINK} className="block font-semibold text-white hover:underline">
                 {PHONE_DISPLAY}
               </a>
+              <a href={PHONE_2_TEL_LINK} className="block font-semibold text-white hover:underline">
+                {PHONE_2_DISPLAY}
+              </a>
               <a href={EMAIL_LINK} className="block font-semibold text-white hover:underline">
                 {EMAIL_ADDRESS}
               </a>
+              <p>{ADMIN_OFFICE_HOURS}</p>
             </div>
 
             <div className="mt-5 flex gap-3">

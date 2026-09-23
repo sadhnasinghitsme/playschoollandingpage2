@@ -1,15 +1,16 @@
-import { ADMISSION_SESSION, PHONE_DISPLAY, PHONE_TEL_LINK } from "@/config/constants";
+import { PHONE_DISPLAY, PHONE_TEL_LINK } from "@/config/constants";
 
 export default function CTASection() {
   return (
     <section className="bg-gradient-to-r from-coral-500 to-sunny-500 py-14 text-center sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl font-extrabold text-white sm:text-3xl md:text-4xl">
-          Admissions Open {ADMISSION_SESSION}: Pre-Nursery to Class 5
+          Admissions Open: Ready to Apply for Class 6-12?
         </h2>
         {/* TODO-CONFIRM: add a "seats are limited" line only if the school confirms it. */}
         <p className="mt-3 text-base text-white/90 sm:text-lg">
-          Call or enquire today to book a campus visit at Sector 137, Noida.
+          Send an enquiry and our admissions team will guide you through registration, the
+          interaction schedule and fee timelines for Class 6 to 12.
         </p>
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a

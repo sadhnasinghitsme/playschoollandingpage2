@@ -33,8 +33,8 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function validate(values: FormState): Partial<Record<keyof FormState, string>> {
   const errors: Partial<Record<keyof FormState, string>> = {};
   if (!values.parentName.trim()) errors.parentName = "Please enter parent's name.";
-  if (!values.childName.trim()) errors.childName = "Please enter child's name.";
-  if (!values.classSeeking) errors.classSeeking = "Please select a class/stage.";
+  if (!values.childName.trim()) errors.childName = "Please enter student's name.";
+  if (!values.classSeeking) errors.classSeeking = "Please select a class.";
   if (!PHONE_REGEX.test(values.phone.trim())) {
     errors.phone = "Enter a valid 10-digit mobile number.";
   }
@@ -198,10 +198,10 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
               Admission Enquiry
             </span>
             <h2 id="enquiry-modal-heading" className="mt-3 pr-8 font-heading text-xl font-extrabold text-ink-900 sm:text-2xl">
-              Let&apos;s Plan Your Child&apos;s SKS Journey
+              Class 6-12 Admission: Get Fee Structure &amp; Callback
             </h2>
             <p className="mt-1 text-sm text-ink-900/60">
-              Share a few details — our admissions team will call you back shortly.
+              Share a few details and our admissions team will call you back.
             </p>
 
             <form onSubmit={handleSubmit} noValidate className="mt-5 space-y-4">
@@ -220,7 +220,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 />
               </Field>
 
-              <Field label="Child's Name" htmlFor="modal-childName" error={errors.childName} required>
+              <Field label="Student's Name" htmlFor="modal-childName" error={errors.childName} required>
                 <input
                   id="modal-childName"
                   type="text"
@@ -233,7 +233,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 />
               </Field>
 
-              <Field label="Class / Stage Seeking Admission" htmlFor="modal-classSeeking" error={errors.classSeeking} required>
+              <Field label="Class Applying For" htmlFor="modal-classSeeking" error={errors.classSeeking} required>
                 <select
                   id="modal-classSeeking"
                   value={values.classSeeking}
@@ -242,7 +242,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                   aria-describedby={errors.classSeeking ? "modal-classSeeking-error" : undefined}
                   className={inputClass(Boolean(errors.classSeeking))}
                 >
-                  <option value="">Select class/stage</option>
+                  <option value="">Select a class</option>
                   {CLASS_OPTIONS.map((option) => (
                     <option key={option} value={option}>
                       {option}
@@ -291,7 +291,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 disabled={status === "loading"}
                 className="w-full rounded-full bg-coral-500 px-6 py-3.5 text-base font-bold text-white shadow-soft transition hover:bg-coral-600 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {status === "loading" ? "Submitting..." : "Submit Enquiry"}
+                {status === "loading" ? "Submitting..." : "Get Fee Structure & Call Back"}
               </button>
             </form>
           </>

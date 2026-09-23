@@ -7,11 +7,11 @@ export default function Programs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-2xl font-extrabold text-ink-900 sm:text-3xl md:text-4xl">
-            Nursery to Class 5 Programs at SKS World School, Noida
+            Class 6 to 12 CBSE Programmes at SKS World School, Noida
           </h2>
           <p className="mt-3 text-base text-ink-900/70">
-            From first steps into school to a strong CBSE foundation — a clear path from
-            Pre-Nursery to Class 5.
+            A CBSE curriculum that builds strong academics, co-curricular skills and
+            sportsmanship.
           </p>
         </div>
 
